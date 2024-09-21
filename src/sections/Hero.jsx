@@ -4,14 +4,14 @@ import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
 import HackerRoom from "../components/HackerRoom"
-import { useControls } from "leva"
+import { usex } from "leva"
 
 
 
 
 const Hero = () => {
-  const controls = useControls('Hacker Room', {
-    rotationX: {
+  const x = usex('Hacker Room', {
+    positionX: {
       value: 2.5,
       min: -10,
       max: 10,
@@ -31,7 +31,7 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HackerRoom
-              scale={0.05}
+              scale={[x.positionX, x.positionY, x.positionZ]}
               position={[0, 0, 0]}
               rotation={[0, 280, 0]}
             />
