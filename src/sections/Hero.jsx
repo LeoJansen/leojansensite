@@ -4,11 +4,22 @@ import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
 import HackerRoom from "../components/HackerRoom"
+import { useControls } from "leva"
 
 
 
 
 const Hero = () => {
+  const controls = useControls('Hacker Room', {
+    rotationX: {
+      value: 2.5,
+      min: -10,
+      max: 10,
+    }
+
+  },
+  );
+
   return (
     <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -19,9 +30,13 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <HackerRoom scale={0.05} position={[0, 0, 0]} rotation={[0, 280, 0]} />
+            <HackerRoom
+              scale={0.05}
+              position={[0, 0, 0]}
+              rotation={[0, 280, 0]}
+            />
             <ambientLight intensity={1} />
-            <directionalLight position={[10,10,10]} intensity={0.5} />
+            <directionalLight position={[10, 10, 10]} intensity={0.5} />
 
 
           </Suspense>
