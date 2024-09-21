@@ -15,7 +15,7 @@ const NavItems = () => {
             ))}
         </ul>
     )
-}
+};
 
 
 const Navbar = () => {
@@ -39,13 +39,10 @@ const Navbar = () => {
                         <NavItems/>
 
                     </nav>
-
                 </div>
-
             </div>
-
         </header>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
