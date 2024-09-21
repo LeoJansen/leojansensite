@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 
@@ -20,9 +19,9 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <HackerRoom scale={0.05} position={[0, 0, 0]} rotation={[0, -Math.PI/2, 0]} />
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[0, 0, 5]} />
+            <HackerRoom scale={0.05} position={[0, 0, 0]} rotation={[0, 280, 0]} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[10,10,10]} intensity={0.5} />
 
 
           </Suspense>
