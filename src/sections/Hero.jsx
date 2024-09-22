@@ -12,6 +12,7 @@ import ReactLogo from "../components/ReactLogo";
 import Cube from "../components/Cube";
 import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
+import { Button } from "../components/Button";
 
 
 
@@ -34,24 +35,33 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
             <HeroCamera isMobile={isMobile}>
-            <HackerRoom
-              scale={sizes.deskScale}
-              position={sizes.deskPosition}
-              rotation={[0.2, -Math.PI, 0]}
-            />
+              <HackerRoom
+                scale={sizes.deskScale}
+                position={sizes.deskPosition}
+                rotation={[0.2, -Math.PI, 0]}
+              />
             </HeroCamera>
-          
+
             <group>
-              <Target position={sizes.targetPosition}/>
-              <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale}/>
-              <Cube position={sizes.cubePosition}/>
-              <Rings position={sizes.ringPosition}/>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale} />
+              <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+          <a>
+            <Button>
+              Contact
+            </Button>
 
+          </a>
+
+
+        </div>
       </div>
 
     </section>
