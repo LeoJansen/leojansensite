@@ -1,5 +1,5 @@
 import Globe from "react-globe.gl";
-import {Button} from "../components/Button";
+import { Button } from "../components/Button";
 
 const About = () => {
   return (
@@ -35,17 +35,25 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[{ lat: -25.52669798834267, lng: -54.55250972271618, text:"I'm here!"}]}
+                labelsData={[{ lat: -25.52669798834267, lng: -54.55250972271618, text: "I'm here!" }]}
                 labelColor={() => "rgb(25,255,250)"}
                 labelDotRadius={0.5}
                 labelSize={() => 1}
-              />, 
+              />,
             </div>
             <div className="z-20">
               <p className="grid-headtext">I work remotely across most timezones.</p>
               <p className="grid-subtext">I&apos;m based in Foz do Iguaçu, Brazil, with remote work available.</p>
-              <Button name="Contact me" isBeam={true} containerClass="w-full mt-10"/>
-
+              <Button name="Contact me" isBeam={true} containerClass="w-full mt-10" />
+            </div>
+          </div>
+        </div>
+        <div className="xl:col-span-2 xl:row-span-3">
+          <div className="grid-container">
+            <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+            <div>
+              <p className="grid-headtext">Passion for Coding</p>
+              <p className="grid-subtext"> “Programming is not just a vocation for me; It&apos;s what I was born to do. Every time I get involved in a project and start coding, I feel that my purpose in life is to be in contact with algorithms.”</p>
             </div>
           </div>
         </div>
