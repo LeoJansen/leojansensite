@@ -16,9 +16,9 @@ import Rings from "../components/Rings";
 
 
 const Hero = () => {
-  const isSmall = useMediaQuery({maxWidth: 480});
-  const isMobile = useMediaQuery({minWidth: 480.001, maxWidth: 768});
-  const isTablet = useMediaQuery({minWidth: 768.001, maxWidth: 1024});
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
@@ -41,7 +41,7 @@ const Hero = () => {
               <Target position={sizes.targetPosition}/>
               <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale}/>
               <Cube position={sizes.cubePosition}/>
-              <Rings position={sizes.ringsPosition}/>
+              <Rings position={sizes.ringPosition}/>
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />

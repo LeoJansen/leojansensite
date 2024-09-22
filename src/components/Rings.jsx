@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unknown-property */
 import { useGSAP } from '@gsap/react';
 import { Center, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useCallback, useRef } from 'react';
 
-const Rings = ({ position }) => {
+const Rings = ({ position = [0,0,0]}) => {
   const refList = useRef([]);
   const getRef = useCallback((mesh) => {
     if (mesh && !refList.current.includes(mesh)) {
