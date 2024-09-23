@@ -2,6 +2,12 @@ import Globe from "react-globe.gl";
 import { Button } from "../components/Button";
 
 const About = () => {
+const firstLabel = () => {
+  return 10
+};
+const secondLabel = () => {
+  return 20
+};
   return (
     <section className="c-space my-20">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -35,10 +41,14 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[{ lat: -25.52669798834267, lng: -54.55250972271618, text: "I'm here!" }]}
+                labelsData={[
+                  { lat: -25.52669798834267, lng: -54.55250972271618, text: "I'm here!"},
+                  { lat: 25.52669798834267, lng: 0.55250972271618, text: "Zoom and Rotate this globe!", }
+                ]}
                 labelColor={() => "rgb(25,255,250)"}
-                labelDotRadius={0.5}
-                labelSize={() => 1}
+                labelDotRadius={0.25}
+                labelSize={() => 3}
+              
               />,
             </div>
             <div className="z-20">
@@ -54,6 +64,15 @@ const About = () => {
             <div>
               <p className="grid-headtext">Passion for Coding</p>
               <p className="grid-subtext"> “Programming is not just a vocation for me; It&apos;s what I was born to do. Every time I get involved in a project and start coding, I feel that my purpose in life is to be in contact with algorithms.”</p>
+            </div>
+          </div>
+        </div>
+        <div className="xl:col-span-2 xl:row-span-3">
+          <div className="grid-container">
+            <img src="/assets/grid4.png" alt="grid-4" className="w-full sm:h-[266px] h-fit object-contain" />
+            <div>
+              <p className="grid-headtext">I&apos;m a full-stack developer.</p>
+              <p className="grid-subtext">I specialize in Javascript/Typescript with a focus on React and NextJs ecosystems.</p>
             </div>
           </div>
         </div>
