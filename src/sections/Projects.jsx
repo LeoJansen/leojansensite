@@ -1,10 +1,14 @@
 import { useState } from "react"
-import { myProjects } from "../constants";
+import { myProjects } from "../constants/index.js";
 
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const currentProject = myProjects[selectedProjectIndex];
+  console.log(myProjects[0])
+  console.log(currentProject.href)
+  console.log(myProjects[selectedProjectIndex].href)
+ 
 
 
   return (
@@ -35,9 +39,13 @@ const Projects = () => {
               ))}
 
             </div>
-            <a className="flex items-center gap-2 cursor-pointer text-white-600" href={currentProject.href} target="_blank" rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+            <a
+              className="flex items-center gap-2 cursor-pointer text-white-600"
+              href={currentProject.href}
+              target="_blank"
+              rel="noreferrer">
+              Check Live Site
+              {/* <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" /> */}
             </a>
 
           </div>
