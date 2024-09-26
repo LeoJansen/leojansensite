@@ -14,12 +14,24 @@ const Clients = () => {
                 <img src={img} alt={name} className="w-12 h-12 rounded-full" />
               </div>
               <div className="flex flex-col">
+              <p className="font-semibold text-white-800">{name}</p>
+              <p className="text-white-500 md:text-base text-sm font-light">{position}</p>
               </div>
-              <p className="client-name">{name}</p>
-              <p className="client-position">{position}</p>
-            
             </div>
+            <div className="flex self-end items-center gap-2">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <img
+                  key={index}
+                  src="/assets/star.png"
+                  alt="star"
+                  className="w-5 h-5"
+                />
+              ))}
+
+            </div>
+
           </div>
+
         ))}
 
       </div>
