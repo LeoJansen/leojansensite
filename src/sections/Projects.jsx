@@ -1,16 +1,31 @@
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { myProjects } from "../constants/index.js";
+import { Canvas } from "@react-three/fiber";
+import { Center, OrbitControls } from "@react-three/drei";
+import CanvasLoader from "../components/CanvasLoader.jsx";
+import DemoComputer from "../components/DemoComputer.jsx";
+
+
+const projectCount = myProjects.length;
 
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const currentProject = myProjects[selectedProjectIndex];
-  console.log(myProjects[0])
-  console.log(currentProject.href)
-  console.log(myProjects[selectedProjectIndex].href)
-  const handleNavigation = () => {
+ 
 
-  }
+
+
+  const handleNavigation = (direction) => {
+    setSelectedProjectIndex((prevIndex) => {
+      if (direction === 'previous') {
+        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
+      } else if (direction === 'next') {
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
+      };
+    });
+
+  };
 
 
 
@@ -57,10 +72,27 @@ const Projects = () => {
             <button className="arrow-btn"
               onClick={() => handleNavigation('previous')}
             >
-              <img src="/assets/right-arrow.png" alt="arrow" className="w-4 h-4" />
-
+              <img src="/assets/left-arrow.png" alt="left-arrow" className="w-4 h-4" />
             </button>
-
+            <button className="arrow-btn"
+              onClick={() => handleNavigation('next')}
+            >
+              <img src="/assets/right-arrow.png" alt="right-arrow" className="w-4 h-4" />
+            </button>
+          </div>
+          <div className="border border-black-300 w-full h-96 rounded-lg bg-black-200 md:h-full min-h-96">
+            <Canvas>
+              <ambientLight intensity={3.3} />
+              <directionalLight position={[10, 10, 5]} />
+              <Center>
+                <Suspense fallback={<CanvasLoader />}>
+                <group scale={3} position={[-0.5, -4, -1.1]} rotation={[0, -0.1, 0]}>
+                  <DemoComputer texture={currentProject.texture}/>
+                </group>
+                </Suspense>
+              </Center>
+              <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+            </Canvas>
 
           </div>
 
