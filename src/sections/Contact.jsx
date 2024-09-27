@@ -2,17 +2,19 @@ import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const formRef = useRef(null);
-    const [loading, setLoading] = useState(false);
-    const [form, setForm] = useState({
+    const formInitialState = {
         name: '',
         email: '',
         message: '',
-
-    });
-    const handleChange = ({name, value}) => { 
-        setForm({...form, [name]: value});
     };
+    const formRef = useRef(null);
+    const [loading, setLoading] = useState(false);
+    const [form, setForm] = useState(formInitialState);
+    const handleChange = ({ target: { name, value } }) => {
+        setForm({ ...form, [name]: value });
+    };
+
+
     const handleSubmit = (e) => {
         //service_b20yqyt
         e.preventDefault();
@@ -22,9 +24,10 @@ const Contact = () => {
             to_name: 'Leo',
             from_email: form.email,
             message: form.message
-        })
-        
-     };
+        }, 'IWk8CKbT8e3sIbisn')
+        setForm(formInitialState);
+        setLoading(false); 
+    };
 
     return (
         <section className="c-space my-20">
