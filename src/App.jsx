@@ -11,7 +11,7 @@ import Projects from "./sections/Projects";
 
 const App = () => {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className="w-full mx-auto">
       <Navbar/>
     {/*   <Hero/> */}
       <About/>
