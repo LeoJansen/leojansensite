@@ -13,9 +13,18 @@ import Cube from "../components/Cube";
 import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import { Button } from "../components/Button";
+import Spline from "@splinetool/react-spline";
+import { motion } from 'framer-motion';
+import {images} from "../constants/images";
 
-
-
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+    },
+  },
+};
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -25,43 +34,66 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-20">
-        <p className="text-xl sm:text-3xl font-medium text-white text-center font-generalsans">Hi, I am Leo <span className="waving-hand">👋</span> </p>
-        <p className="hero_tag text-blue-500 text-3xl font-bold  ">Building Products & Brands</p>
+        <div className="absolute flex inset-0">
+      <Spline scene="https://prod.spline.design/KPq2zRTBztdxQH2L/scene.splinecode" />
       </div>
-      <div className="w-full h-full absolute inset-0">
-        {/* <Leva /> */}
-        <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            <HeroCamera isMobile={isMobile}>
-              <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.2, -Math.PI, 0]}
-              />
-            </HeroCamera>
-
-            <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale} />
-              <Cube position={sizes.cubePosition} />
-              <Rings position={sizes.ringPosition} />
-            </group>
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
-          </Suspense>
-        </Canvas>
-        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-          <a href="#about" className="w-fit">
-            <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-
-          </a>
-
-
+      <div className="app__header-container">
+        <div className="app__header-info">
+          <motion.div className="app__header-badge app__flex"
+      
+            >
+        
+            <motion.div className="badge-cmp app__flex" style={{ marginLeft: 20 }}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{
+                duration: 0.3,
+                delay: 3.5,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 1
+              }}>
+              <p > Hello, I am</p>
+              <br />
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{
+                  duration: 0.3,
+                  delay: 5,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 1
+                }}>
+                <h1 className='head-text'>Leo</h1>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+          <motion.div className="app__header-tag"
+            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+            transition={{ delay: 7, duration: 1, ease: "easeInOut" }}>
+            <div className="tag-cmp app__flex">
+              <p className="p-text">Web Developer</p>
+              <p className="p-text">Freelancer</p>
+            </div>
+          </motion.div>
         </div>
+        <motion.div className="app__header-circles"
+          variant={scaleVariants}
+          whileInView={scaleVariants.whileInView}>
+          {[images.react, images.redux, images.node].map((circle, index) => (
+            <>
+            <div className="circle-cmp app__flex" key={`circle-${circle}`}
+            data-tip
+            data-for={circle}
+            >
+              <img src={circle} alt="circle" />
+            </div>
+            
+            </>
+            
+          ))}
+        </motion.div>
       </div>
-
+     
     </section>
   )
 }
