@@ -1,0 +1,11 @@
+Model Information:
+* title:	CODE METER
+* source:	https://sketchfab.com/3d-models/code-meter-a877896991064296a66d461a8e62e62b
+* author:	dreamerinthefalls (https://sketchfab.com/dreamerinthefalls)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CODE METER" (https://sketchfab.com/3d-models/code-meter-a877896991064296a66d461a8e62e62b) by dreamerinthefalls (https://sketchfab.com/dreamerinthefalls) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
