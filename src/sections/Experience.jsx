@@ -1,7 +1,6 @@
 import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { DevAvatar } from '../components/DevAvatar.jsx';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import { workExperiences } from '../constants/index.js';
 
