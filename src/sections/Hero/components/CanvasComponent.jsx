@@ -1,11 +1,12 @@
 
 import { useFrame } from "@react-three/fiber";
 
-import { useRef } from "react";
+import { Suspense, useRef, useState } from "react";
 import { Chair } from "../../../../Chair";
 import { Avatar } from "../../../components/Avatar";
 import { Ground } from "./Ground";
 import { VideoText } from "./VideoText";
+import * as THREE from 'three';
 
 export const CanvasComponent = () => {
 
@@ -22,18 +23,32 @@ export const CanvasComponent = () => {
 
   return (
     <>
+    <Suspense fallback={null}>
 
       <group ref={ref}>
         <Chair scale={0.01} position={[-3, 0, 0]} rotation={[0, 1, 0]} />
         <Avatar animation="Typing" position={[-3, 0, 0]} rotation={[0, 1, 0]} />
         <Ground />
         <VideoText position={[0, 1.3, -2]} />
-
-
+        <ambientLight intensity={0.15} />
+        <spotLight position={[0, 10, 0]} intensity={0.3} />
+        <directionalLight position={[-50, 0, -40]} intensity={0.17} />
+      
       </group>
-
+      <Intro />
+      </Suspense>
     </>
   );
 };
 
 
+
+
+
+function Intro() {
+  const [vec] = useState(() => new THREE.Vector3())
+  return useFrame((state) => {
+    state.camera.position.lerp(vec.set(state.mouse.x * 5, 3 + state.mouse.y * 2, 14), 0.05)
+    state.camera.lookAt(0, 0, 0)
+  })
+}
