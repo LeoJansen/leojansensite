@@ -5,6 +5,7 @@ import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
 import { Chair } from '../../../Chair';
 
 import { Avatar } from '../../components/Avatar';
+import { CanvasComponent } from './components/CanvasComponent';
 
 export default function Hero() {
 
@@ -15,14 +16,7 @@ export default function Hero() {
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
-        <group position={[0, -1, 0]}>
-          <Chair scale={0.01} position={[-3,0,0]} rotation={[0,1,0]}/>
-          <Avatar animation="Typing" position={[-3, 0, 0]} rotation={[0,1,0]}/>
-          
-
-          <VideoText position={[0, 1.3, -2]} />
-          <Ground />
-        </group>
+       <CanvasComponent />
         <ambientLight intensity={0.15} />
         <spotLight position={[0, 10, 0]} intensity={0.3} />
         <directionalLight position={[-50, 0, -40]} intensity={0.17} />
@@ -36,14 +30,7 @@ export default function Hero() {
 
 
 
-function Ground() {
-  const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
-  return (
-    <Reflector blur={[400, 100]} resolution={2048} args={[10, 10]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
-      {(Material, props) => <Material color="#a0a0a0" metalness={0.4} roughnessMap={floor} normalMap={normal} normalScale={[2, 2]} {...props} />}
-    </Reflector>
-  )
-}
+
 
 function Intro() {
   const [vec] = useState(() => new THREE.Vector3())
