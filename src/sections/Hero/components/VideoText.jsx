@@ -1,4 +1,4 @@
-import { Text } from "@react-three/drei";
+import { Text, Text3D } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import * as THREE from "three";
 
@@ -7,7 +7,7 @@ export function VideoText(props) {
     useEffect(() => void video.play(), [video])
     return (
       <>
-      <Text font="/Inter-Bold.woff" fontSize={0.6} letterSpacing={-0.03} {...props} position={[-0.61,0.5,-4]}>
+      <Text font="/Inter-Bold.woff" fontSize={0.6} letterSpacing={-0.03} {...props} position={[-0.61,0.5,-4]} rotate={[2,20,0]}>
     Hello, I'm
         <meshBasicMaterial toneMapped={false}>
           <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
