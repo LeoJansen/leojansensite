@@ -17,20 +17,17 @@ export function Avatar(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("models/devAvatar8.glb");
 
-  const { animations: typingAnimation } = useFBX("animations/sitting3.fbx");
-  const { animations: standingAnimation } = useFBX(
-    "animations/Standing Idle.fbx"
-  );
-  const { animations: fallingAnimation } = useFBX(
-    "animations/Falling Idle.fbx"
-  );
+  const { animations: sittingAnimation } = useFBX("animations/sitting3.fbx");
+  const { animations: sitToStandAnimation } = useFBX("animations/sitToStand.fbx");
 
-  typingAnimation[0].name = "Typing";
-  standingAnimation[0].name = "Standing";
-  fallingAnimation[0].name = "Falling";
+
+  sittingAnimation[0].name = "sitting";
+  sitToStandAnimation[0].name = "sitToStand";
+  
+
 
   const { actions } = useAnimations(
-    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
+    [sittingAnimation[0], sitToStandAnimation[0],  ],
     group
   );
 
