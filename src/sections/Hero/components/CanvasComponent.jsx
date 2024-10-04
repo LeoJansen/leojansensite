@@ -19,7 +19,7 @@ export const CanvasComponent = () => {
       <Suspense fallback={null}>
         <color attach="background" args={['black']} />
         <fog attach="fog" args={['black', 15, 20]} />
-        <ambientLight intensity={0.36} />
+        <ambientLight intensity={0.46} />
         <spotLight position={[0, 10, -2]} intensity={0.96} />
         <directionalLight position={[-50, 0, -40]} intensity={0.8317} />
 
