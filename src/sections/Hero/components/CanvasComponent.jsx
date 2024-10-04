@@ -1,37 +1,31 @@
 
 import { useFrame } from "@react-three/fiber";
 import * as THREE from 'three'
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Chair } from "../../../../Chair";
 import { Avatar } from "../../../components/Avatar";
 import { Ground } from "./Ground";
 import { VideoText } from "./VideoText";
 
 export const CanvasComponent = () => {
-
-
   const ref = useRef();
-  useFrame(({ clock }) => {
-    const t = clock.getElapsedTime()
-    const x = Math.sin(t / 2) * 2
-    const y = Math.cos(t / 2) * 2
-    const z = Math.sin(t / 2) * 2
-  }
 
-  )
+
+
+
 
   return (
     <>
       <Suspense fallback={null}>
-      <color attach="background" args={['black']} />
-      <fog attach="fog" args={['black', 15, 20]} />
+        <color attach="background" args={['black']} />
+        <fog attach="fog" args={['black', 15, 20]} />
         <ambientLight intensity={0.915} />
         <spotLight position={[0, 10, 0]} intensity={0.3} />
         <directionalLight position={[-50, 0, -40]} intensity={0.17} />
 
         <group ref={ref}>
           <Chair scale={0.01} position={[-3, 0, 0]} rotation={[0, 1, 0]} />
-          <Avatar animation="sitToStand" position={[-3, 0, 0]} rotation={[0, 1, 0]} />
+          <Avatar animation={"sitting"} position={[-3,0,0]} rotation={[0, 1, 0]} />
           <Ground />
           <VideoText position={[0, 1.3, -2]} />
 
