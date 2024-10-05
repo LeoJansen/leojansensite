@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import { workExperiences } from '../constants/index.js';
+import { Avatar2 } from '../components/Avatar2.jsx';
 
 const WorkExperience = () => {
   const [animationName, setAnimationName] = useState('thoughtful');
@@ -44,7 +45,7 @@ const WorkExperience = () => {
 
 
 
-                <DevAvatar position-y={-3} scale={3} animationName={animationName} />
+                <Avatar2 position-y={-3} scale={3} animationName={animationName} />
               </Suspense>
             </Canvas>
           </div>

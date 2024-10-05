@@ -15,12 +15,12 @@ const App = () => {
     <main className="w-full mx-auto">
       <Navbar/>
       <Hero/>
-     {/*  <About/>
+ <About/>
       <Projects/>
       <Clients/>
       <WorkExperience/>
       <Contact  />
-      <Footer/> */}
+      <Footer/>
     </main>
   )
 };
