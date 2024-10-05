@@ -13,7 +13,7 @@ import Projects from "./sections/Projects";
 const App = () => {
   return (
     <main className="w-full mx-auto">
-      {/* <Navbar/> */}
+      <Navbar/>
       <Hero/>
      {/*  <About/>
       <Projects/>

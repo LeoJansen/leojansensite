@@ -9,11 +9,7 @@ import * as THREE from "three";
 
 export function Avatar({animation = "sitting", ...props}) {
   
-  const { headFollow, cursorFollow, wireframe } = useControls({
-    headFollow: false,
-    cursorFollow: false,
-    wireframe: false,
-  });
+
   const group = useRef();
   const { nodes, materials } = useGLTF("models/devAvatar8.glb");
  

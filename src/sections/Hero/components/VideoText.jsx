@@ -13,7 +13,7 @@ export function VideoText(props) {
           <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
         </meshBasicMaterial>
       </Text>
-      <Text font="/Inter-Bold.woff" fontSize={2.8} letterSpacing={-0.03} {...props} position={[0,-0.81,-4]}>
+      <Text font="/Inter-Bold.woff" fontSize={2.8} letterSpacing={-0.03} {...props} position={[0,-0.81,-4]} depth={51}>
         leo
         <meshBasicMaterial toneMapped={false}>
           <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
