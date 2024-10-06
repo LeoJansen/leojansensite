@@ -15,7 +15,7 @@ const WorkExperience = () => {
 
         <div className="work-container">
           <div className="work-canvas">
-            <Canvas>
+            <Canvas camera={{ position: [0, 3, 25], fov: 15 }}>
               <ambientLight intensity={1.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[20, 10, 10]} intensity={0.01} />
