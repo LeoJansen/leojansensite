@@ -283,7 +283,7 @@ export const navLinks = [
       duration: '2019 - 2020',
       title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
       icon: '/assets/notion.svg',
-      animation: 'pointing',
+      animation: 'dancing',
     },
     {
       id: 4,
@@ -292,6 +292,6 @@ export const navLinks = [
       duration: '2019 - 2020',
       title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
       icon: '/assets/notion.svg',
-      animation: 'agreeing',
+      animation: 'acknowledging',
     },
   ];

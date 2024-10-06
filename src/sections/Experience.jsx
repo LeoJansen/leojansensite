@@ -45,7 +45,7 @@ const WorkExperience = () => {
 
 
 
-                <Avatar2 position-y={-3} scale={3} animationName={animationName} />
+                <Avatar2 position-y={-3} scale={3} animation={animationName} />
               </Suspense>
             </Canvas>
           </div>
@@ -57,7 +57,7 @@ const WorkExperience = () => {
                   key={index}
                   onClick={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOut={() => setAnimationName('idle')}
+                  onPointerOut={() => setAnimationName('thoughtful')}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
