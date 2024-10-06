@@ -11,7 +11,7 @@ export function Avatar2({animation = "sitting", ...props}) {
   
 
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/devAvatar8.glb");
+  const { nodes, materials } = useGLTF("models/devAvatar2.glb");
  
   const { animations: sittingAnimation } = useFBX("animations/sitting3.fbx");
   const { animations: sitToStandAnimation } = useFBX("animations/sitToStand.fbx");
