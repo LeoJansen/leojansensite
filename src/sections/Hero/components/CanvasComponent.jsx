@@ -6,13 +6,16 @@ import { Chair } from "../../../../Chair";
 import { Avatar } from "../../../components/Avatar";
 import { Ground } from "./Ground";
 import { VideoText } from "./VideoText";
+import { useMediaQuery } from "react-responsive";
+
+
 
 export const CanvasComponent = () => {
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+
   const ref = useRef();
-
-
-
-
 
   return (
     <>
@@ -25,9 +28,19 @@ export const CanvasComponent = () => {
 
         <group ref={ref}>
           <Chair scale={0.01} position={[-3, -2, -2]} rotation={[0, 1, 0]} />
+          {isSmall && (
+            <>
+               <Avatar animation={"sitting"} position={[-3,-2,-2]} rotation={[0, 1, 0]} />
+            </>
+          )}
+          {!isSmall && !isMobile && !isTablet && (
+            <>
           <Avatar animation={"sitting"} position={[-3,-2,-2]} rotation={[0, 1, 0]} />
+            </>
+          )}
+         
           <Ground position={[0,-2,0]}/>
-          <VideoText />
+          <VideoText isSmall isMobile isTablet/>
 
 
         </group>
