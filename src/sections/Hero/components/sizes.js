@@ -38,14 +38,14 @@ export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
         },
         videoText: {
           text1: {
-            position: [-0.2125,0.15,-5],
+            position: [-0.2125,0.05,-4],
             rotation: [0, 0, 0],
             scale: 1,
             fontSize:0.5
   
           },
           text2: {
-            position: [0.2,-0.81,-5],
+            position: [0.2,-0.981,-4],
             rotation: [0, 0, 0],
             scale: 1,
             fontSize: 2
