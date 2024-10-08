@@ -6,7 +6,7 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero/Hero";
 import Navbar from "./sections/Navbar";
-import Projects from "./sections/Projects";
+import Projects from "./sections/Projects/Projects";
 import WorkExperience from "./sections/WorkExperience";
 
 //#5C53AC

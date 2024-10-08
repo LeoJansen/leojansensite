@@ -1,9 +1,11 @@
 import { Suspense, useState } from "react"
-import { myProjects } from "../constants/index.js";
+import { myProjects } from "../../constants/index.js";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../components/CanvasLoader.jsx";
-import DemoComputer from "../components/DemoComputer.jsx";
+import CanvasLoader from "../../components/CanvasLoader.jsx";
+import DemoComputer from "../../components/DemoComputer.jsx";
+import { VideoText } from "./components/VideoText.jsx";
+
 
 
 const projectCount = myProjects.length;
@@ -35,30 +37,44 @@ const Projects = () => {
 
       <p className="head-text mt-2">My Work</p>
       <div className="border border-black-300 w-full h-96 rounded-lg bg-black-200 md:h-[50vh] min-h-96 overflow-hidden ">
-        <Canvas>
+   
+      <Canvas>
           <ambientLight intensity={3.3} />
           <directionalLight position={[10, 10, 5]} />
           <Center>
             <Suspense fallback={<CanvasLoader />}>
               <group scale={3} position={[-0.5, -4, -1.1]} rotation={[0, -0.1, 0]}>
-                <DemoComputer texture={currentProject.texture} />
+               <VideoText videoUrl={currentProject.texture} />
               </group>
             </Suspense>
           </Center>
           <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-        </Canvas>
+        </Canvas> 
 
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-2 py-2 px-5 shadow-2xl">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-
-
-          <div className="absolute top-0 right-0">
-            <img src={myProjects[0].spotlight} alt="spotligth" className="w-full h-96 object-cover rounded-xl" />
+        <div className="flex justify-between items-center">
+            <button className="arrow-btn"
+              onClick={() => handleNavigation('previous')}
+            >
+              <img src="/assets/left-arrow.png" alt="left-arrow" className="w-4 h-4" />
+            </button>
+            <button className="arrow-btn"
+              onClick={() => handleNavigation('next')}
+            >
+              <img src="/assets/right-arrow.png" alt="right-arrow" className="w-4 h-4" />
+            </button>
           </div>
-          <div className="flex gap-4">
+
+
+          <div className="absolute top-0 right-0 -z-10">
+            <img src={currentProject.spotlight} alt="spotligth" className="w-full h-96 object-cover rounded-xl" />
+          </div>
+
+          <div className="flex gap-4 items-center">
           <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg " style={currentProject.logoStyle}>
-            <img src={myProjects[0].logo} alt="logo" className="w-10 h-10 shadow-sm" />
+            <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
           </div>
           <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
 
@@ -88,18 +104,7 @@ const Projects = () => {
               <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
             </a>
           </div>
-          <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn"
-              onClick={() => handleNavigation('previous')}
-            >
-              <img src="/assets/left-arrow.png" alt="left-arrow" className="w-4 h-4" />
-            </button>
-            <button className="arrow-btn"
-              onClick={() => handleNavigation('next')}
-            >
-              <img src="/assets/right-arrow.png" alt="right-arrow" className="w-4 h-4" />
-            </button>
-          </div>
+     
 
 
 

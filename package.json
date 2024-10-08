@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
+    "@pmndrs/assets": "^1.7.0",
     "@react-three/drei": "^9.112.1",
     "@react-three/fiber": "^8.17.7",
     "@splinetool/react-spline": "^4.0.0",
