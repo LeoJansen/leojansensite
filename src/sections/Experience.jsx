@@ -5,7 +5,7 @@ import CanvasLoader from '../components/CanvasLoader.jsx';
 import { workExperiences } from '../constants/index.js';
 import { Avatar2 } from '../components/Avatar2.jsx';
 
-const WorkExperience = () => {
+const Experience = () => {
   const [animationName, setAnimationName] = useState('thoughtful');
 
   return (
@@ -84,4 +84,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default Experience;
