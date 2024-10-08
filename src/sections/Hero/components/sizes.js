@@ -32,27 +32,27 @@ export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
     } else if (isMobile ) {
       return {
         avatar: {
-          position: [-1, -2, -1],
+          position: [-0.71, -2, -1],
           rotation: [0, 1, 0],
           scale: 1
         },
         videoText: {
           text1: {
-            position: [-0.5,0.15,-4],
+            position: [-0.2125,0.15,-5],
             rotation: [0, 0, 0],
             scale: 1,
             fontSize:0.5
   
           },
           text2: {
-            position: [0.2,-0.81,-4],
+            position: [0.2,-0.81,-5],
             rotation: [0, 0, 0],
             scale: 1,
             fontSize: 2
           },
         },
         chair:{
-          position:[-1, -2, -1],
+          position:[-0.71, -2, -1],
           scale: 0.01,
           rotation:[0, 1, 0]
         }
