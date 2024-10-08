@@ -15,7 +15,7 @@ const App = () => {
   return (
     <main className="w-full mx-auto">
       <Navbar />
-      <Hero />
+     {/*  <Hero /> */}
       <About />
       <Projects />
       <Clients />
