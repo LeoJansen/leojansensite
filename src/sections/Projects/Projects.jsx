@@ -36,7 +36,7 @@ const Projects = () => {
 
 
   return (
-    <section className="c-space my-20 h-screen w-full">
+    <section className="c-space h-screen w-full bg-[rgba(10,10,10,0.5)]  -z-40">
       <div className="flex w-full p-4">
         <p className="head-text ">My Work</p>
       </div>

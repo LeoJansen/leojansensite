@@ -8,6 +8,7 @@ import { Ground } from "./Ground";
 import { VideoText } from "./VideoText";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "./sizes";
+import CanvasLoader from "../../../components/CanvasLoader";
 
 
 
@@ -24,7 +25,7 @@ export const CanvasComponent = () => {
 
   return (
     <>
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader/>}>
         <color attach="background" args={['black']} />
         <fog attach="fog" args={['black', 15, 20]} />
         <ambientLight intensity={0.46} />

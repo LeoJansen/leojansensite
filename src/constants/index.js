@@ -139,22 +139,22 @@ export const navLinks = [
     };
   };
   
-  export const workExperiences = [
+  export const oldWorkExperiences = [
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
+      name: 'Javascript',
+      pos: 'Student',
       duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+      title: "Comecei minha jornada no desenvolvimento web explorando o mundo do front-end. HTML, CSS e JavaScript são minhas primeiras ferramentas para criar experiências digitais incríveis.Minha paixão por criar interfaces visuais me levou a dar os primeiros passos no desenvolvimento front-end, utilizando HTML, CSS e JavaScript.",
       icon: '/assets/framer.svg',
       animation: 'salute',
     },
     {
       id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
+      name: 'MongoDB',
+      pos: 'Freelance',
       duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+      title: "O MongoDB foi o catalisador da minha imersão no mundo dos bancos de dados. A flexibilidade e escalabilidade dessa tecnologia me permitiram criar um aplicativo inovador para o Ministério Público do Paraná, superando desafios e entregando resultados significativos",
       icon: '/assets/figma.svg',
       animation: 'clapping',
     },
@@ -163,7 +163,7 @@ export const navLinks = [
       name: 'Notion',
       pos: 'Junior Web Developer',
       duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
+      title: "Atualmente trabalhando com Next.js, elevo meus projetos a um novo patamar. A capacidade de criar aplicações web com renderização do lado do servidor, juntamente com o ecossistema rico do React, me permite entregar soluções personalizadas e com alta performance para os meus clientes.",
       icon: '/assets/notion.svg',
       animation: 'dancing',
     },
@@ -175,5 +175,36 @@ export const navLinks = [
       title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
       icon: '/assets/notion.svg',
       animation: 'acknowledging',
+    },
+  ];
+
+
+  export const workExperiences = [
+    {
+      id: 1,
+      name: 'Javascript',
+      pos: 'Student',
+      duration: '2019 - 2020',
+      title: "I started my journey in web development exploring the world of front-end. HTML, CSS, and JavaScript are my first tools to create amazing digital experiences. My passion for creating visual interfaces led me to take the first steps in front-end development, using HTML, CSS, and JavaScript.",
+      icon: '/assets/framer.svg',
+      animation: 'salute',
+    },
+    {
+      id: 2,
+      name: 'MongoDB',
+      pos: 'Freelance',
+      duration: '2020 - 2022',
+      title: "MongoDB was the catalyst for my immersion in the world of databases. The flexibility and scalability of this technology allowed me to create an innovative application for the Public Ministry of Paraná, overcoming challenges and delivering significant results.",
+      icon: '/assets/figma.svg',
+      animation: 'clapping',
+    },
+    {
+      id: 3,
+      name: 'NextJS',
+      pos: 'Junior Web Developer',
+      duration: '2022 - Present',
+      title: "Currently working with Next.js, I'm taking my projects to a new level. The ability to create web applications with server-side rendering, along with React's rich ecosystem, allows me to deliver customized and high-performance solutions to my clients.",
+      icon: '/assets/notion.svg',
+      animation: 'dancing',
     },
   ];
