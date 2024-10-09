@@ -68,7 +68,7 @@ const Projects = () => {
             </div>
 
             <div className="flex gap-4 items-center row-span-1 col-span-2 row-start-1 col-start-2">
-              <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg " style={currentProject.logoStyle}>
+              <div className="p-3 backdrop-filter backdrop-blur-3xl w-20 h-fit  flex justify-center rounded-lg " style={currentProject.logoStyle}>
                 <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
               </div>
               <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
@@ -78,7 +78,7 @@ const Projects = () => {
             <div className="flex flex-col gap-5 text-white-600 my-500 col-span-4 row-start-2">
 
               <p className="animatedText">{currentProject.desc}</p>
-              <p className="animatedText">{currentProject.subdesc}</p>
+        
             </div>
             <div className="flex flex-wrap gap-5 row-start-3 col-span-2 col-start-1 w-full h-full justify-center items-center ">
               <div className="flex items-center gap-3">
