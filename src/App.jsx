@@ -15,12 +15,12 @@ const App = () => {
   return (
     <main className="w-full mx-auto">
       <Navbar />
-     {/*  <Hero /> */}
-      {/* <About /> */}
+      {/* <Hero /> */}
+      <About />
       <Projects />
-      {/* <Clients /> */}
+      <Clients />
      {/*  <WorkExperience /> */}
-     {/*  <Contact /> */}
+      <Contact />
       {/* <Footer /> */}
     </main>
   )

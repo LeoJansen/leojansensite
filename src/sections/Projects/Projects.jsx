@@ -1,20 +1,20 @@
-import { Suspense, useState } from "react"
+import { useState } from "react"
 import { myProjects } from "../../constants/index.js";
-import { Canvas } from "@react-three/fiber";
-import { Center, OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../../components/CanvasLoader.jsx";
-import DemoComputer from "../../components/DemoComputer.jsx";
-import { VideoText } from "./components/VideoText.jsx";
 
+import ReactPlayer from 'react-player/youtube'
 
 
 const projectCount = myProjects.length;
 
 
+const sizes = (isSmall, isMobile, isTablet, isPC, isXL) => {
+
+}
+
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const currentProject = myProjects[selectedProjectIndex];
 
+  const currentProject = myProjects[selectedProjectIndex];
 
 
 
@@ -32,29 +32,25 @@ const Projects = () => {
 
 
   return (
-    <section className="c-space my-20 h-screen flex flex-col gap-4">
-
-
-      <p className="head-text mt-2">My Work</p>
-      <div className="border border-black-300 w-full h-96 rounded-lg bg-black-200 md:h-[50vh] min-h-96 overflow-hidden ">
-   
-      <Canvas>
-          <ambientLight intensity={3.3} />
-          <directionalLight position={[10, 10, 5]} />
-          <Center>
-            <Suspense fallback={<CanvasLoader />}>
-              <group scale={3} position={[-0.5, -4, -1.1]} rotation={[0, -0.1, 0]}>
-               <VideoText videoUrl={currentProject.texture} />
-              </group>
-            </Suspense>
-          </Center>
-          <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-        </Canvas> 
-
+    <section className="c-space my-20 h-screen w-full">
+      <div className="flex w-full p-4">
+      <p className="head-text ">My Work</p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-2 py-2 px-5 shadow-2xl">
+      <div className="flex flex-col w-full md:flex-row justify-center items-center ">
+    
+      <div className="relative flex h-fit border border-black-300 rounded-lg  overflow-hidden justify-center  items-center shadow-[0px_0px_12px_1px_rgba(12,12,25,0.2)] z-20">
+      
+
+
+          <ReactPlayer  url='https://www.youtube.com/embed/fgy3ycb1Zow' />
+
+          
+         
+      
+      </div>
+      <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl w-[50vw] ">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-        <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center">
             <button className="arrow-btn"
               onClick={() => handleNavigation('previous')}
             >
@@ -73,15 +69,15 @@ const Projects = () => {
           </div>
 
           <div className="flex gap-4 items-center">
-          <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg " style={currentProject.logoStyle}>
-            <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
-          </div>
-          <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
+            <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg " style={currentProject.logoStyle}>
+              <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
+            </div>
+            <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
 
           </div>
-        
+
           <div className="flex flex-col gap-5 text-white-600 my-500">
-            
+
             <p className="animatedText">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
@@ -104,13 +100,18 @@ const Projects = () => {
               <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
             </a>
           </div>
-     
+
 
 
 
 
         </div>
       </div>
+
+      </div>
+
+
+    
 
     </section>
   )
