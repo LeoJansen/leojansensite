@@ -14,7 +14,7 @@ const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ minWidth:440, maxWidth: 1024 });
-
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
 
 
@@ -45,11 +45,11 @@ const Projects = () => {
       </div>
       <div className="flex flex-col w-full lg:flex-row justify-center items-center ">
 
-        <div className="relative ">    
+        <div className={`relative ${!isPortrait && "w-[85vw] lg:w-[vw] h-[60vh] "} ${isPortrait && "w-[80vw] h-[25vh]"} rounded-lg overflow-hidden`}>    
     
 
 
-            <ReactPlayer width="100%" height="100%" className="absolute top-0 left-0"  url='https://www.youtube.com/embed/fgy3ycb1Zow' /> 
+            <ReactPlayer width="100%" height="100%" className="absolute top-0 left-0 flex"  url='https://www.youtube.com/embed/fgy3ycb1Zow' /> 
 
 
 
