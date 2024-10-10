@@ -12,8 +12,8 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-
-  const isMobile = useMediaQuery({ maxWidth: 1024 });
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ minWidth:440, maxWidth: 1024 });
 
 
 
@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <section className="c-space  -z-40 ">
-      <div className="flex bg-[rgba(13,11,15,0.8)] p-4 min-h-[80vh] rounded-lg">
+      <div className="flex flex-col bg-[rgba(13,11,15,0.8)] p-4 min-h-[80vh] rounded-lg">
 
       
       <div className="flex w-full p-4 mb-8 ">
@@ -45,11 +45,11 @@ const Projects = () => {
       </div>
       <div className="flex flex-col w-full lg:flex-row justify-center items-center ">
 
-        <div className={`bg-black w-fit h-fit rounded-lg flex overflow-hidden`}>    
+        <div className="relative ">    
     
 
 
-            <ReactPlayer width={isMobile ? "90vw" :" 40vw" } url='https://www.youtube.com/embed/fgy3ycb1Zow' /> 
+            <ReactPlayer width="100%" height="100%" className="absolute top-0 left-0"  url='https://www.youtube.com/embed/fgy3ycb1Zow' /> 
 
 
 
