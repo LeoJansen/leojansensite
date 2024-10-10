@@ -3,13 +3,13 @@ import { navLinks } from "../constants";
 
 
 
-const NavItems = () => {
+const NavItems = ({ onClick = () => {} }) => {
 
     return (
         <ul className="nav-ul">
             {navLinks.map(({name, href}, index) => (
                 <li key={index} className="nav-li">
-                    <a href={href} className="nav-li_a" onClick={()=> {}}>
+                    <a href={href} className="nav-li_a" onClick={onClick}>
                         {name}
                     </a>
                 </li>   
@@ -20,11 +20,10 @@ const NavItems = () => {
 
 
 const Navbar = () => {
-    const [isOpen, setState] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setState((prevState) => !prevState);
-    };
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black-300/30 backdrop-blur-sm">
@@ -40,7 +39,7 @@ const Navbar = () => {
             <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
                 <nav className="p-5">
 
-                    <NavItems/>
+                    <NavItems onClick={closeMenu} />
 
                 </nav>
 

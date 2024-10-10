@@ -8,9 +8,21 @@
   scroll-behavior: smooth;
 }
 
-body {
+html, body {
   background: #141414;
   font-family: 'General Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.custom-list {
+  list-style-type: disc; /* Define o tipo de marcador */
+  color: #e5e5e5; /* Muda a cor dos marcadores */
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.custom-list li {
+  color: inherit; /* Garante que o texto dos itens da lista herde a cor do pai */
 }
 
 @layer utilities {
