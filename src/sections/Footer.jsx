@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <section className="relative  p-4  border-t border-black-300 flex flex-col md:flex-row  justify-start md:justify-between md:items-center flex-wrap gap-5">
+    <section className="relative  p-4  border-t border-black-300 flex flex-col md:flex-row  justify-start md:justify-between md:items-center flex-wrap gap-5 bg-[#0c0414]">
       <div className="text-white-500 flex gap-4">
         <Link to="/nested/terms-of-use" >
           Terms of Use

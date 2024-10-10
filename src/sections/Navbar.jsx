@@ -27,7 +27,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 px-auto">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black-300/30 px-auto backdrop-blur-sm">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-center py-3 mx-auto">
                    <img src="/logo.svg" alt="logo" className="w-[51px]" />

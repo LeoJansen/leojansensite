@@ -30,13 +30,13 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space  h-fit  bg-[#0c0414] ">
-            <div className="relative flex items-center justify-center flex-col    rounded-lg py-12 ">
+        <section className="sm:px-10 px-5  h-fit  bg-[#0c0414] py-10 rounded-lg shadow-[0_-2px_21px_5px_rgba(0,0,0,0.3)]">
+            <div className="relative flex items-center justify-center flex-col    rounded-lg py-12  ">
                 
                
-                <div className="md:w-[50vw] xl:w-[40vw] border-4 border-[#381263]  p-4 rounded-lg">
+                <div className="md:w-[50vw] xl:w-[40vw] border-4 border-[#381263]  p-4 rounded-lg bg-[#0c0414]">
                     <h3 className="head-text">Let&apos;s talk</h3>
-                    <p className="text-lg text-white-600 mt-3">Wheter you&apos;re looking to build a new website, comprove your existing platform, or bring a unique project to life, I&apos;d love to hear from you.</p>
+                    <p className="text-lg text-white-600 mt-3">Wheter you&apos;re looking to build a new website, comprove your existing platform, or bring a unique project to life, I&apos;d love to hear from you.</p> 
                     <form ref={formRef} onSubmit={handleSubmit} className="flex mt-12 flex-col space-y-7">
                         <label className="space-y-3">
                             <span className="field-label">Full Name</span>
@@ -76,7 +76,7 @@ const Contact = () => {
                             />
 
                         </label>
-                        <button className="field-btn" type="submit" disabled={loading} >{loading ? 'Sending...' : 'Send Message'}
+                        <button className="field-btn " type="submit" disabled={loading} >{loading ? 'Sending...' : 'Send Message'}
                             <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
                         </button>
 
