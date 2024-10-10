@@ -1,5 +1,17 @@
 
+const range = (start, stop, step) =>
+  Array.from(
+    { length: Math.ceil((stop - start) / step) },
+    (_, i) => start + i * step,
+  );
+
+
 export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
+  range(0, 100).map(() => console.log("\n"))
+  console.log({isSmall, isMobile, isTablet,isPC, isXL })
+  range(0, 10).map(() => console.log("\n"));
+
+  console.log('/n')
     if (isSmall) {
       return {
         avatar: {
@@ -89,7 +101,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
     } else if(isPC) {
       return {
         avatar: {
-          position: [-1.9, -2, -2],
+          position: [-2.4, -2, -2],
           rotation: [0, 1, 0]
         },
         videoText: {
@@ -108,7 +120,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
           },
         },
         chair:{
-          position:[-1.9, -2, -2],
+          position:[-2.4, -2, -2],
           scale: 0.01,
           rotation:[0, 1, 0]
         }
