@@ -30,11 +30,11 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space my-20 h-fit ">
-            <div className="relative flex items-center justify-center flex-col">
+        <section className="c-space  h-fit  bg-[#0c0414] ">
+            <div className="relative flex items-center justify-center flex-col    rounded-lg py-12 ">
                 
                
-                <div className="md:w-[50vw] xl:w-[40vw]">
+                <div className="md:w-[50vw] xl:w-[40vw] border-4 border-[#381263]  p-4 rounded-lg">
                     <h3 className="head-text">Let&apos;s talk</h3>
                     <p className="text-lg text-white-600 mt-3">Wheter you&apos;re looking to build a new website, comprove your existing platform, or bring a unique project to life, I&apos;d love to hear from you.</p>
                     <form ref={formRef} onSubmit={handleSubmit} className="flex mt-12 flex-col space-y-7">
