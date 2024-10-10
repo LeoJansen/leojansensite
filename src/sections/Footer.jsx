@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <section className="relative c-space mt-20 lg:mt-0 t-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
-      <div className="text-white-500 flex gap-2">
+    <section className="relative  p-4  border-t border-black-300 flex flex-col md:flex-row  justify-start md:justify-between md:items-center flex-wrap gap-5">
+      <div className="text-white-500 flex gap-4">
         <Link to="/nested/terms-of-use" >
           Terms of Use
         </Link>
@@ -11,7 +11,7 @@ const Footer = () => {
           Privacy Policy
         </Link>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
 
         <a href="https://github.com/leojansen" target="_blank" rel="noreferrer">
           <div className="social-icon">
