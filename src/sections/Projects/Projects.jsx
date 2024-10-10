@@ -36,8 +36,11 @@ const Projects = () => {
 
 
   return (
-    <section className="c-space h-screen w-full bg-[rgba(10,10,10,0.5)]  -z-40">
-      <div className="flex w-full p-4">
+    <section className="c-space  -z-40 ">
+      <div className="flex bg-[rgba(13,11,15,0.8)] p-4 min-h-[80vh] rounded-lg">
+
+      
+      <div className="flex w-full p-4 mb-8 ">
         <p className="head-text ">My Work</p>
       </div>
       <div className="flex flex-col w-full lg:flex-row justify-center items-center ">
@@ -52,8 +55,8 @@ const Projects = () => {
 
 
         </div>
-        <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl lg:w-[50vw] ">
-          <div className="grid grid-cols-4 relative gap-5 sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+        <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl lg:w-[40vw] ">
+          <div className="grid grid-cols-4 relative gap-5 sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 bg-[#0000001e] rounded-lg">
             <div className="flex w-full h-full justify-center items-center  col-start-1 row-start-1">
               <button className="arrow-btn"
                 onClick={() => handleNavigation('previous')}
@@ -122,7 +125,7 @@ const Projects = () => {
 
 
 
-
+      </div>
     </section>
   )
 }

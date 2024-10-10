@@ -27,8 +27,12 @@ const WorkExperience = () => {
     const currentExperience = workExperiences[selectedExperience];
 
     return (
-        <section className="h-screen">
-            <div className="head-text ">WorkExperience</div>
+        <section className="c-space h-screen">
+      <div className="flex w-full my-4">
+      <div className="head-text ">WorkExperience</div>
+      </div>
+
+        
             <div className="flex flex-col md:flex-row">
                 
          

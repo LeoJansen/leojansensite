@@ -29,7 +29,7 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
             <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center py-3 mx-auto c-space">
+                <div className="flex justify-between items-center py-3 mx-auto">
                    <img src="/logo.svg" alt="logo" className="w-[51px]" />
                     <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle Menu">
                         <img src={ isOpen ? 'assets/close.svg':'assets/menu.svg'} alt="menu" className="w-6 h-6"/>
