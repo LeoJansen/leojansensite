@@ -3,7 +3,7 @@
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-policy">
-      <h1>Privacy Policy</h1>
+      <h1 className="head-text">Privacy Policy</h1>
       <p>
         At [Your Website Name], we are committed to protecting the privacy and security of our users' personal information. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.
       </p>
