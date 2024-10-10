@@ -2,8 +2,9 @@ import { Suspense, useState } from "react"
 import { workExperiences } from "../../constants";
 import { Avatar2 } from "../../components/Avatar2";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../../components/CanvasLoader";
+import { OrbitControls, OrthographicCamera, PerspectiveCamera } from "@react-three/drei";
+
+import { CanvasComponent } from "./ExperienceCanvasComponent";
 
 
 
@@ -36,38 +37,9 @@ const WorkExperience = () => {
 
 
                     <div className="flex h-[60vh] lg:h-[80vh]">
-                        <Canvas camera={{ position: [0, 3, 25], fov: 15 }}>
-                            <ambientLight intensity={1.5} />
-                            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                            <directionalLight position={[20, 10, 10]} intensity={0.01} />
-                            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
-
-                            <Suspense fallback={<CanvasLoader />}>
-                                <mesh position={[0, 10, -15]} receiveShadow>
-                                    <planeGeometry args={[1100, 4000]} />
-                                    <meshStandardMaterial color="rgba(255,255,255,0.8)" />
-                                </mesh>
-                                <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3.5, -10]} receiveShadow>
-                                    <planeGeometry args={[1200, 1130]} />
-                                    <meshStandardMaterial color="rgba(20,20,20,0.9)" />
-                                </mesh>
-                                {/* Right Wall */}
-                                <mesh rotation={[0, -Math.PI / 2, 0]} position={[150, 0, 0]} receiveShadow>
-                                    <planeGeometry args={[1100, 4000]} />
-                                    <meshStandardMaterial color="rgba(200,0,255,0.9)" />
-                                </mesh>
-                                {/* Left Wall */}
-                                <mesh rotation={[0, Math.PI / 2, 0]} position={[-150, 0, 0]} receiveShadow>
-                                    <planeGeometry args={[1100, 4000]} />
-                                    <meshStandardMaterial color="rgba(20,20,80,0.9)" />
-                                </mesh>
-
-
-
-
-                                <Avatar2 position-y={-3} scale={3} animation={animationName} />
-                            </Suspense>
+                        <Canvas concurrent gl={{ alpha: false }} pixelRatio={[1, 1.5]} >
+                           <PerspectiveCamera makeDefault position={[0, -1, 2]}   fov={25} />
+                           <CanvasComponent animationName={animationName}/>
                         </Canvas>
                     </div>
 
