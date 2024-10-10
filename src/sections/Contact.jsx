@@ -30,7 +30,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space my-20 h-[80vh] ">
+        <section className="c-space my-20 h-fit ">
             <div className="relative flex items-center justify-center flex-col">
                 
                
