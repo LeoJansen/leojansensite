@@ -1,9 +1,9 @@
 import { Suspense, useState } from "react"
-import { workExperiences } from "../constants";
-import { Avatar2 } from "../components/Avatar2";
+import { workExperiences } from "../../constants";
+import { Avatar2 } from "../../components/Avatar2";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../components/CanvasLoader";
+import CanvasLoader from "../../components/CanvasLoader";
 
 
 
