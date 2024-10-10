@@ -3,8 +3,9 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import { workExperiences } from '../constants/index.js';
+import { Avatar2 } from '../components/Avatar2.jsx';
 
-const WorkExperience = () => {
+const Experience = () => {
   const [animationName, setAnimationName] = useState('thoughtful');
 
   return (
@@ -14,7 +15,7 @@ const WorkExperience = () => {
 
         <div className="work-container">
           <div className="work-canvas">
-            <Canvas>
+            <Canvas camera={{ position: [0, 3, 25], fov: 15 }}>
               <ambientLight intensity={1.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[20, 10, 10]} intensity={0.01} />
@@ -44,7 +45,7 @@ const WorkExperience = () => {
 
 
 
-                <DevAvatar position-y={-3} scale={3} animationName={animationName} />
+                <Avatar2 position-y={-3} scale={3} animation={animationName} />
               </Suspense>
             </Canvas>
           </div>
@@ -56,7 +57,7 @@ const WorkExperience = () => {
                   key={index}
                   onClick={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOut={() => setAnimationName('idle')}
+                  onPointerOut={() => setAnimationName('thoughtful')}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
@@ -83,4 +84,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default Experience;

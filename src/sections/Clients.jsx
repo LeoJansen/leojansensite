@@ -2,8 +2,11 @@ import { clientReviews } from "../constants"
 
 const Clients = () => {
   return (
-    <section className="c-space my-20">
+    <section className="c-space ">
+      <div className="flex w-full p-4">
       <h3 className="head-text">Hear from my Clients</h3>
+      </div>
+ 
       <div className="client-container">
         {clientReviews.map(({ id, name, review, img, position }) => (
           <div className="client-review" key={id}>

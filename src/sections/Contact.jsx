@@ -30,10 +30,11 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space my-20">
-            <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
-                <div className="contact-container">
+        <section className="c-space my-20 h-[80vh] ">
+            <div className="relative flex items-center justify-center flex-col">
+                
+               
+                <div className="md:w-[50vw] xl:w-[40vw]">
                     <h3 className="head-text">Let&apos;s talk</h3>
                     <p className="text-lg text-white-600 mt-3">Wheter you&apos;re looking to build a new website, comprove your existing platform, or bring a unique project to life, I&apos;d love to hear from you.</p>
                     <form ref={formRef} onSubmit={handleSubmit} className="flex mt-12 flex-col space-y-7">

@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
-export function VideoText({
+export function ExperienceVideoText({
   position1,
   rotation1,
   scale1,

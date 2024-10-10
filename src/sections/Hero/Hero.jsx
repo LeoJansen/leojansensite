@@ -6,6 +6,7 @@ import { Chair } from '../../../Chair';
 
 import { Avatar } from '../../components/Avatar';
 import { CanvasComponent } from './components/CanvasComponent';
+import { Button } from '../../components/Button';
 
 export default function Hero() {
 
@@ -21,6 +22,11 @@ export default function Hero() {
        
  
     </Canvas>
+    <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#about" className="w-fit">
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
+      </div>
     </section>
   )
 }

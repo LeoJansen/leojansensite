@@ -57,51 +57,12 @@ export const navLinks = [
   ];
   
   export const myProjects = [
+   
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-      subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-      href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-      texture: '/textures/project/project1.mp4',
-      logo: '/assets/project-logo1.png',
-      logoStyle: {
-        backgroundColor: '#2A1816',
-        border: '0.2px solid #36201D',
-        boxShadow: '0px 0px 60px 0px #AA3C304D',
-      },
-      spotlight: '/assets/spotlight1.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
-    {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-      subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-      texture: '/textures/project/project2.mp4',
-      logo: '/assets/project-logo2.png',
+      title: 'Taskfine - Task Management Tool',
+      desc: 'Taskfine is a user-friendly task management tool designed to help you stay organized and productive. Similar to Trello, it uses a visual board system to organize your tasks into cards. With Taskfine, you can easily create, assign, and track tasks, making it a great tool for both personal and team projects.',
+      href: 'https://taskfine.netlify.app',
+      logo: '/assets/taskfine.png',
       logoStyle: {
         backgroundColor: '#13202F',
         border: '0.2px solid #17293E',
@@ -124,101 +85,21 @@ export const navLinks = [
           name: 'TypeScript',
           path: '/assets/typescript.png',
         },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
+  
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-      subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-      href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-      texture: '/textures/project/project3.mp4',
-      logo: '/assets/project-logo3.png',
+      title: 'Samba Code Studio',
+      desc: 'Developed with the latest technologies, this website is a true work of digital art. Using artificial intelligence tools, we created unique and personalized images and animations that bring your brand to life. Immerse yourself in a stunning visual experience, designed to impress and inspire.',
+      href: 'https://sambacodestudio.netlify.app/',
+
+      logo: '/assets/sambacode.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
         background:
-          'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-        border: '0.2px solid rgba(208, 213, 221, 1)',
+          'linear-gradient(0deg, rgba(0,0,30,0.6), rgba(180,0,0,0.6)), linear-gradient(90deg, rgba(5, 55, 55, 0.9) 0%, rgba(20, 23, 121, 0.8) 100%)',
+        border: '0.2px solid rgba(120, 2, 111, 0.51)',
         boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-      },
-      spotlight: '/assets/spotlight3.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
-    {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-      subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-      texture: '/textures/project/project4.mp4',
-      logo: '/assets/project-logo4.png',
-      logoStyle: {
-        backgroundColor: '#0E1F38',
-        border: '0.2px solid #0E2D58',
-        boxShadow: '0px 0px 60px 0px #2F67B64D',
-      },
-      spotlight: '/assets/spotlight4.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
-    {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-      subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-      texture: '/textures/project/project5.mp4',
-      logo: '/assets/project-logo5.png',
-      logoStyle: {
-        backgroundColor: '#1C1A43',
-        border: '0.2px solid #252262',
-        boxShadow: '0px 0px 60px 0px #635BFF4D',
       },
       spotlight: '/assets/spotlight5.png',
       tags: [
@@ -244,6 +125,7 @@ export const navLinks = [
         },
       ],
     },
+   
   ];
   
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
@@ -257,22 +139,22 @@ export const navLinks = [
     };
   };
   
-  export const workExperiences = [
+  export const oldWorkExperiences = [
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
+      name: 'Javascript',
+      pos: 'Student',
       duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+      title: "Comecei minha jornada no desenvolvimento web explorando o mundo do front-end. HTML, CSS e JavaScript são minhas primeiras ferramentas para criar experiências digitais incríveis.Minha paixão por criar interfaces visuais me levou a dar os primeiros passos no desenvolvimento front-end, utilizando HTML, CSS e JavaScript.",
       icon: '/assets/framer.svg',
       animation: 'salute',
     },
     {
       id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
+      name: 'MongoDB',
+      pos: 'Freelance',
       duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+      title: "O MongoDB foi o catalisador da minha imersão no mundo dos bancos de dados. A flexibilidade e escalabilidade dessa tecnologia me permitiram criar um aplicativo inovador para o Ministério Público do Paraná, superando desafios e entregando resultados significativos",
       icon: '/assets/figma.svg',
       animation: 'clapping',
     },
@@ -281,9 +163,9 @@ export const navLinks = [
       name: 'Notion',
       pos: 'Junior Web Developer',
       duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
+      title: "Atualmente trabalhando com Next.js, elevo meus projetos a um novo patamar. A capacidade de criar aplicações web com renderização do lado do servidor, juntamente com o ecossistema rico do React, me permite entregar soluções personalizadas e com alta performance para os meus clientes.",
       icon: '/assets/notion.svg',
-      animation: 'pointing',
+      animation: 'dancing',
     },
     {
       id: 4,
@@ -292,6 +174,37 @@ export const navLinks = [
       duration: '2019 - 2020',
       title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
       icon: '/assets/notion.svg',
-      animation: 'agreeing',
+      animation: 'acknowledging',
+    },
+  ];
+
+
+  export const workExperiences = [
+    {
+      id: 1,
+      name: 'Javascript',
+      pos: 'Student',
+      duration: '2019 - 2020',
+      title: "I started my journey in web development exploring the world of front-end. HTML, CSS, and JavaScript are my first tools to create amazing digital experiences. My passion for creating visual interfaces led me to take the first steps in front-end development, using HTML, CSS, and JavaScript.",
+      icon: '/assets/framer.svg',
+      animation: 'salute',
+    },
+    {
+      id: 2,
+      name: 'MongoDB',
+      pos: 'Freelance',
+      duration: '2020 - 2022',
+      title: "MongoDB was the catalyst for my immersion in the world of databases. The flexibility and scalability of this technology allowed me to create an innovative application for the Public Ministry of Paraná, overcoming challenges and delivering significant results.",
+      icon: '/assets/figma.svg',
+      animation: 'clapping',
+    },
+    {
+      id: 3,
+      name: 'NextJS',
+      pos: 'Junior Web Developer',
+      duration: '2022 - Present',
+      title: "Currently working with Next.js, I'm taking my projects to a new level. The ability to create web applications with server-side rendering, along with React's rich ecosystem, allows me to deliver customized and high-performance solutions to my clients.",
+      icon: '/assets/notion.svg',
+      animation: 'dancing',
     },
   ];
