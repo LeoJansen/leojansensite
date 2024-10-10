@@ -63,8 +63,12 @@ const WorkExperience = () => {
                             <div className="flex flex-col">
                                 <div className="flex flex-row items-center gap-4">
                                     <div className="flex flex-col h-full justify-start items-center py-2">
-                                        <div className="">
-                                            <img className="w-full h-full" src={currentExperience.icon} alt="" />
+                                        <div className="rounded-md w-16 h-16 bg-[#1d1d1d]">
+                                            <div className="w-fit h-fit rounded-full overflow-hidden m-[0.7891px]">
+                                            <img className="w-full h-full rounded-md" src={currentExperience.icon} alt="" />
+
+                                            </div>
+                                            
                                         </div>
 
 
