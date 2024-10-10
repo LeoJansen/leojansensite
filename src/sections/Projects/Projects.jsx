@@ -45,7 +45,7 @@ const Projects = () => {
       </div>
       <div className="flex flex-col w-full lg:flex-row justify-center items-center ">
 
-        <div className={`relative ${!isPortrait && "w-[85vw] lg:w-[vw] h-[60vh] "} ${isPortrait && "w-[80vw] h-[25vh]"} rounded-lg overflow-hidden`}>    
+        <div className={`relative ${!isPortrait && "w-[85vw] lg:w-[50vw] h-[40vh] "} ${isPortrait && "w-[80vw] h-[25vh]"} rounded-lg overflow-hidden`}>    
     
 
 
@@ -55,7 +55,7 @@ const Projects = () => {
 
 
         </div>
-        <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl lg:w-[40vw] ">
+        <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl md:w-[60vw] ">
           <div className="grid grid-cols-4 relative gap-5 sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 bg-[#0000001e] rounded-lg">
             <div className="flex w-full h-full justify-center items-center  col-start-1 row-start-1">
               <button className="arrow-btn"
@@ -71,8 +71,8 @@ const Projects = () => {
             </div>
 
             <div className="flex gap-4 items-center row-span-1 col-span-2 row-start-1 col-start-2">
-              <div className="p-3 backdrop-filter backdrop-blur-3xl w-20 h-fit  flex justify-center rounded-lg " style={currentProject.logoStyle}>
-                <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
+              <div className=" backdrop-filter backdrop-blur-3xl w-32 h-14 flex justify-center items-center  rounded-lg " style={currentProject.logoStyle}>
+                <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm inset-0 " />
               </div>
               <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
 
