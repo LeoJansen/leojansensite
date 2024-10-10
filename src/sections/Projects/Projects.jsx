@@ -56,7 +56,7 @@ const Projects = () => {
 
         </div>
         <div className="flex gap-5 mt-2 py-2 px-5 shadow-2xl md:w-[60vw] ">
-          <div className="grid grid-cols-4 relative gap-5 sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 bg-[#0000001e] rounded-lg">
+          <div className="grid grid-cols-5 relative gap-5 sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 bg-[#0000001e] rounded-lg">
             <div className="flex w-full h-full justify-center items-center  col-start-1 row-start-1">
               <button className="arrow-btn"
                 onClick={() => handleNavigation('previous')}
@@ -70,15 +70,15 @@ const Projects = () => {
               <img src={currentProject.spotlight} alt="spotligth" className="w-full h-96 object-cover rounded-xl" />
             </div>
 
-            <div className="flex gap-4 items-center row-span-1 col-span-2 row-start-1 col-start-2">
-              <div className=" backdrop-filter backdrop-blur-3xl w-32 h-14 flex justify-center items-center  rounded-lg " style={currentProject.logoStyle}>
-                <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm inset-0 " />
+            <div className="flex gap-4 items-center row-span-1 col-span-3 row-start-1 col-start-2">
+              <div className=" backdrop-filter backdrop-blur-3xl flex justify-center items-center  rounded-lg  p-2 min-w-[60px] min-h-[60px]" style={currentProject.logoStyle}>
+                <img src={currentProject.logo} alt="logo" style={{width:"32px", objectFit:"contain" }}className="shadow-sm inset-0 " />
               </div>
               <p className="text-white  text-md md:text-2xl font-semibold animatedText">{currentProject.title}</p>
 
             </div>
 
-            <div className="flex flex-col gap-5 text-white-600 my-500 col-span-4 row-start-2">
+            <div className="flex flex-col gap-5 text-white-600 my-500 col-span-5 row-start-2">
 
               <p className="animatedText">{currentProject.desc}</p>
         
@@ -107,7 +107,7 @@ const Projects = () => {
 
             </div>
 
-            <div className="flex w-full h-full justify-center items-center col-start-4 row-start-1">
+            <div className="flex w-full h-full justify-center items-center col-start-5 row-start-1">
   
               <button className="arrow-btn"
                 onClick={() => handleNavigation('next')}

@@ -62,7 +62,7 @@ export const navLinks = [
       title: 'Taskfine - Task Management Tool',
       desc: 'Taskfine is a user-friendly task management tool designed to help you stay organized and productive. Similar to Trello, it uses a visual board system to organize your tasks into cards. With Taskfine, you can easily create, assign, and track tasks, making it a great tool for both personal and team projects.',
       href: 'https://taskfine.netlify.app',
-      logo: '/assets/taskfine.png',
+      logo: '/assets/projects/taskfine.png',
       logoStyle: {
         backgroundColor: '#13202F',
         border: '0.2px solid #17293E',
@@ -93,7 +93,7 @@ export const navLinks = [
       desc: 'Developed with the latest technologies, this website is a true work of digital art. Using artificial intelligence tools, we created unique and personalized images and animations that bring your brand to life. Immerse yourself in a stunning visual experience, designed to impress and inspire.',
       href: 'https://sambacodestudio.netlify.app/',
 
-      logo: '/assets/sambacode.png',
+      logo: '/assets/projects/sambacode.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
         background:
