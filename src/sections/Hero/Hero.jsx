@@ -12,7 +12,7 @@ export default function Hero() {
 
 
   return (
-    <section className='w-full h-screen'>
+    <section id="home" className='w-full h-screen'>
     <Canvas concurrent gl={{ alpha: false }} pixelRatio={[1, 1.5]} camera={{ position: [0, 3, 100], fov: 15 }}>
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />

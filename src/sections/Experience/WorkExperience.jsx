@@ -28,9 +28,9 @@ const WorkExperience = () => {
     const currentExperience = workExperiences[selectedExperience];
 
     return (
-        <section className="c-space h-screen flex flex-col justify-between">
+        <section id="experience" className="c-space h-screen flex flex-col justify-between">
             <div className="flex w-full my-4 self-start">
-                <div className="head-text ">WorkExperience</div>
+                <div className="head-text ">Experience</div>
             </div>
             <div className="flex h-full justify-center items-center ">
                 <div className="flex flex-col md:flex-row justify-stretch h-fit rounded-lg overflow-hidden">
