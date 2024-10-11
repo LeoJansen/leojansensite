@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks } from "../constants";
+import { cn } from "../../lib/utils";
 
 
 
@@ -19,14 +20,15 @@ const NavItems = ({ onClick = () => {} }) => {
 };
 
 
-const Navbar = () => {
+const Navbar = ({className}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
+  
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black-300/30 backdrop-blur-sm">
+        <header className={cn(`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-colors duration-1000 ease-in-out`, className)} >
                 <div className="flex justify-between items-center py-3 mx-12">
                    <img src="/logo.svg" alt="logo" className="w-[51px]" />
                     <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle Menu">

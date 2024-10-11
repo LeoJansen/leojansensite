@@ -18,6 +18,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.28",
     "@types/three": "^0.168.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.9.0",
     "gsap": "^3.12.5",
     "leva": "^0.9.35",
@@ -30,8 +31,10 @@
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.2",
     "sooner": "^1.1.4",
+    "tailwind-merge": "^2.5.3",
     "three": "^0.168.0",
-    "three-stdlib": "^2.33.0"
+    "three-stdlib": "^2.33.0",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

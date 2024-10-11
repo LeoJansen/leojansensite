@@ -30,7 +30,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="sm:px-10 px-5  h-fit  bg-[#0c0414] py-10 rounded-lg shadow-[0_-2px_21px_5px_rgba(0,0,0,0.3)]">
+        <section id="contact" className="sm:px-10 px-5  h-fit  min-h-[95vh] bg-[#0c0414] py-10 rounded-lg shadow-[0_-2px_21px_5px_rgba(0,0,0,0.3)]">
             <div className="relative flex items-center justify-center flex-col    rounded-lg py-12  ">
                 
                

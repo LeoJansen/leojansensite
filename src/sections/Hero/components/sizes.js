@@ -7,11 +7,8 @@ const range = (start, stop, step) =>
 
 
 export const calculateSizes = (isSmall, isMobile, isTablet,isPC, isXL ) => {
-  range(0, 100).map(() => console.log("\n"))
-  console.log({isSmall, isMobile, isTablet,isPC, isXL })
-  range(0, 10).map(() => console.log("\n"));
 
-  console.log('/n')
+
     if (isSmall) {
       return {
         avatar: {
