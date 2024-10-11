@@ -48,7 +48,7 @@ const WorkExperience = () => {
                         <div
                             key={selectedExperience}
                             onClick={() => setAnimationName(currentExperience.animation.toLowerCase())}
-                            onPointerOver={() => setAnimationName(currentExperience.animation.toLowerCase())}
+                           
                             onPointerOut={() => setAnimationName('thoughtful')}
                             className="flex flex-row justify-center items-center group">
                             <div>
