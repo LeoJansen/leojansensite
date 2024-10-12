@@ -43,13 +43,14 @@ export function Avatar2({animation = "thoughtful", ...props}) {
     group
   );
 
-  useEffect(() => {
-    actions[animation].reset();
 
-  }, []);
 
   useEffect(() => {
     actions[animation].fadeIn(1).play();
+    setTimeout(() => {
+      actions[animation].fadeOut(1);
+      actions['thoughtful'].fadeIn(1).play();
+    }, 5000);
     return () => {
       actions[animation].fadeOut(1);
     };
