@@ -1,10 +1,5 @@
-import * as THREE from 'three'
-import React, { Suspense, useEffect, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
-import { Chair } from '../../../Chair';
 
-import { Avatar } from '../../components/Avatar';
+import { Canvas } from '@react-three/fiber'
 import { CanvasComponent } from './components/CanvasComponent';
 import { Button } from '../../components/Button';
 
